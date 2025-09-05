@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Presencia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <div class="login-box">
+      <h1>Red Presencia</h1>
+      <input type="password" id="password" placeholder="Contraseña">
+      <button id="loginBtn">Entrar</button>
+      <p id="loginMsg" class="login-msg"></p>
+    </div>
+  </section>
+
+  <div id="app" class="hidden">
+    <header class="topbar">
+      <h2>Red Presencia 🐻🔥</h2>
+      <nav class="nav-btns">
+        <button data-view="feedView">Feed</button>
+        <button data-view="groupsView">Grupos</button>
+        <button data-view="profileView">Perfil</button>
+        <button data-view="membersView">Miembros</button>
+      </nav>
+    </header>
+
+    <main id="feedView" class="view">
+      <section class="create-post">
+        <textarea id="postContent" rows="2" placeholder="Exprésate aquí..."></textarea>
+        <input type="file" id="postImage" accept="image/*">
+        <div class="record-controls">
+          <button id="startRec">🎤 Grabar</button>
+          <button id="stopRec">⏹️ Detener</button>
+          <span id="recordingStatus"></span>
+        </div>
+        <button class="publish-btn" id="publishBtn">Publicar</button>
+      </section>
+      <div id="postsContainer"></div>
+    </main>
+
+    <main id="groupsView" class="view hidden">
+      <ul id="groupsList" class="list"></ul>
+      <div class="new-item">
+        <input type="text" id="newGroupName" placeholder="Nuevo grupo">
+        <button id="addGroupBtn">Crear</button>
+      </div>
+    </main>
+
+    <main id="profileView" class="view hidden">
+      <div class="profile-card">
+        <p>Animal Guía: Oso 🐻</p>
+        <p>Símbolo Personal: Garra</p>
+        <p>Estado: Total soberanía</p>
+      </div>
+    </main>
+
+    <main id="membersView" class="view hidden">
+      <div id="membersContainer"></div>
+      <div class="new-item">
+        <input type="text" id="newMemberName" placeholder="Nombre">
+        <select id="newMemberAnimal">
+          <option value="Oso 🐻">Oso 🐻</option>
+          <option value="Zorro 🦊">Zorro 🦊</option>
+          <option value="Gato 🐱">Gato 🐱</option>
+        </select>
+        <button id="addMemberBtn">Agregar</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #1877f2;
+  --bg: #f0f2f5;
+  --text: #1c1e21;
+  --card-bg: #fff;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hidden { display: none; }
+
+/* login */
+.login-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-box input {
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  padding: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-msg {
+  color: #e53935;
+  font-size: 14px;
+}
+
+/* app layout */
+.topbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--card-bg);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-btns button {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.view {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create-post textarea,
+.create-post input[type="file"] {
+  width: 100%;
+}
+
+.create-post textarea {
+  resize: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.create-post input[type="file"] {
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+.record-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.publish-btn {
+  padding: 10px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.post {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons span {
+  cursor: pointer;
+}
+
+.buttons span:hover {
+  transform: scale(1.2);
+}
+
+.delete-btn {
+  align-self: flex-end;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.reply-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.reply-box input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+.reply-box .reply-btn {
+  padding: 5px 10px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.reply {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 5px 8px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.new-item {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.new-item input,
+.new-item select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+.new-item button {
+  padding: 8px 12px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.profile-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#membersContainer > div {
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
