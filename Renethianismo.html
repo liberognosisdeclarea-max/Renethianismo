@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renethianismo: La Ley del Presente</title>
+<style>
+:root {
+    --color-primario: #8B0000;
+    --color-secundario: #FFA07A;
+    --color-fondo: #1a1a1a;
+    --color-texto: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    overflow-x: hidden;
+}
+
+.parallax {
+    background-image: url('imagenes/bosque.jpg');
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+}
+
+header h1 { margin: 0; font-size: 3.5rem; font-weight: bold; }
+header p { font-size: 1.2rem; margin-top: 0.5rem; font-style: italic; }
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.carrusel img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--color-texto);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.carrusel img.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px var(--color-secundario);
+}
+
+section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--color-secundario);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.carta {
+    background: rgba(255,255,255,0.05);
+    border-left: 5px solid var(--color-primario);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease, border-left-color 0.4s;
+}
+
+.carta.visible { transform: translateY(0); opacity: 1; }
+.carta:hover { border-left-color: var(--color-secundario); }
+.carta img { width: 100%; border-radius: 10px; margin-bottom: 0.5rem; }
+
+.preguntas { margin-top: 2rem; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 10px; }
+.preguntas ul { list-style-type: square; padding-left: 1.5rem; }
+
+footer { text-align: center; padding: 2rem 1rem; background-color: #111; }
+footer a { color: var(--color-secundario); text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Renethianismo</h1>
+    <p>La Ley del Presente: El presente es Dios y nosotros somos la presencia que lo habita</p>
+    <div class="carrusel">
+        <img src="imagenes/oso.jpg" alt="Oso" class="active">
+        <img src="imagenes/zorro.jpg" alt="Zorro">
+        <img src="imagenes/gato.jpg" alt="Gato">
+    </div>
+</header>
+
+<div class="parallax"></div>
+
+<section id="filosofia">
+    <h2>Filosofía del Presente</h2>
+    <p>En el Renethianismo, el presente es la esencia de la existencia. Cada momento es sagrado y consciente. A través de la observación, la introspección y la conexión con nuestro entorno, comprendemos que la presencia es Dios mismo manifestándose en nosotros. Nuestros animales de poder —el oso, el zorro y el gato— guían nuestras acciones con fuerza, astucia y sensibilidad.</p>
+</section>
+
+<section id="cartas">
+    <h2>Cartas ESPEECQUÉZ del Espectristo</h2>
+    <div class="cartas">
+        <div class="carta"><h3>Reloj de arena</h3><p>Autoconsciencia</p><img src="imagenes/reloj.jpg" alt="Reloj de arena"></div>
+        <div class="carta"><h3>Autenticidad</h3><p>Espejo</p><img src="imagenes/espejo.jpg" alt="Espejo"></div>
+        <div class="carta"><h3>Escritura libre</h3><p>Líneas caóticas</p><img src="imagenes/lineas.jpg" alt="Líneas caóticas"></div>
+        <div class="carta"><h3>Autosugestión</h3><p>Faro en media noche</p><img src="imagenes/faro.jpg" alt="Faro noche"></div>
+        <div class="carta"><h3>Mariposa</h3><p>Aceptación</p><img src="imagenes/mariposa.jpg" alt="Mariposa"></div>
+        <div class="carta"><h3>Creatividad</h3><p>Pincel</p><img src="imagenes/pincel.jpg" alt="Pincel"></div>
+        <div class="carta"><h3>Introspección</h3><p>Luces y espirales</p><img src="imagenes/luces.jpg" alt="Luces y espirales"></div>
+        <div class="carta"><h3>Reconocimiento</h3><p>Trofeo al 100%</p><img src="imagenes/trofeo.jpg" alt="Trofeo"></div>
+        <div class="carta"><h3>Establecer límites</h3><p>Escudo</p><img src="imagenes/escudo.jpg" alt="Escudo"></div>
+        <div class="carta"><h3>Brújula</h3><p>Distancia emocional</p><img src="imagenes/brujula.jpg" alt="Brújula"></div>
+        <div class="carta"><h3>Apoyo externo</h3><p>Puento</p><img src="imagenes/puente.jpg" alt="Puente"></div>
+        <div class="carta"><h3>Empatía</h3><p>Corazón</p><img src="imagenes/corazon.jpg" alt="Corazón"></div>
+        <div class="carta"><h3>Autoafirmación</h3><p>Llave dorada</p><img src="imagenes/llave.jpg" alt="Llave dorada"></div>
+        <div class="carta"><h3>Resiliencia</h3><p>Árbol en medio de tormenta</p><img src="imagenes/arbol.jpg" alt="Árbol tormenta"></div>
+    </div>
+</section>
+
+<section id="preguntas" class="preguntas">
+    <h2>Preguntas Filosóficas</h2>
+    <ul>
+        <li>¿Somos conscientes de la presencia que habita en nosotros cada instante?</li>
+        <li>¿Qué significa vivir plenamente en el presente sin distracciones externas?</li>
+        <li>¿Cómo podemos usar nuestra intuición y animales de poder para guiar nuestras decisiones?</li>
+        <li>¿De qué manera la autenticidad transforma la realidad que percibimos?</li>
+    </ul>
+</section>
+
+<section id="youtube">
+    <h2>Conecta con Reneth en YouTube</h2>
+    <p>Explora más sobre el Renethianismo y la Ley del Presente en mi canal:</p>
+    <a href="https://youtube.com/@mintros47?si=jGXK35hAUKqnTNQD" target="_blank">Ir a mi canal</a>
+</section>
+
+<footer>
+    <p>&copy; 2025 Renethianismo | Todos los derechos reservados</p>
+</footer>
+
+<script>
+const imgs = document.querySelectorAll('.carrusel img');
+let index = 0;
+setInterval(() => {
+    imgs[index].classList.remove('active');
+    index = (index + 1) % imgs.length;
+    imgs[index].classList.add('active');
+}, 4000);
+
+const cartas = document.querySelectorAll('.carta');
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    cartas.forEach(carta => {
+        const cartaTop = carta.getBoundingClientRect().top;
+        if(cartaTop < triggerBottom){ carta.classList.add('visible'); }
+    });
+});
+</script>
+
+</body>
+</html>
