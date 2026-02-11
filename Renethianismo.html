@@ -95,6 +95,39 @@ h2 {
 .preguntas { margin-top: 2rem; background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 10px; }
 .preguntas ul { list-style-type: square; padding-left: 1.5rem; }
 
+.totems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.totem {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.totem h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.totem .mode {
+    color: var(--color-secundario);
+    font-style: italic;
+}
+
+.totem .dominance {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.totem ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.2rem;
+}
+
 footer { text-align: center; padding: 2rem 1rem; background-color: #111; }
 footer a { color: var(--color-secundario); text-decoration: none; font-weight: bold; }
 </style>
@@ -148,6 +181,12 @@ footer a { color: var(--color-secundario); text-decoration: none; font-weight: b
     </ul>
 </section>
 
+<section id="totems">
+    <h2>Totems de Activación</h2>
+    <p>Cuando una situación activa ciertos detonantes, cada tótem ofrece una postura distinta para habitar el presente.</p>
+    <div id="totems-grid" class="totems-grid"></div>
+</section>
+
 <section id="youtube">
     <h2>Conecta con Reneth en YouTube</h2>
     <p>Explora más sobre el Renethianismo y la Ley del Presente en mi canal:</p>
@@ -175,6 +214,56 @@ window.addEventListener('scroll', () => {
         if(cartaTop < triggerBottom){ carta.classList.add('visible'); }
     });
 });
+
+const totems = {
+    "Oso Pardo": {
+        "triggers": ["invasion", "territorio", "desplazamiento"],
+        "mode": "afirmacion brutal",
+        "dominance": 10
+    },
+    "Zorro": {
+        "triggers": ["estrategia", "movimiento", "engaño"],
+        "mode": "desplazamiento lateral",
+        "dominance": 7
+    },
+    "Gato": {
+        "triggers": ["observacion", "silencio", "autonomia"],
+        "mode": "retiro elegante",
+        "dominance": 6
+    },
+    "Oso Polar": {
+        "triggers": ["resistencia", "frio", "soledad"],
+        "mode": "estoicismo",
+        "dominance": 8
+    },
+    "Cuervo": {
+        "triggers": ["analisis", "critica", "perspectiva"],
+        "mode": "ironía estructural",
+        "dominance": 5
+    },
+    "Ogro": {
+        "triggers": ["incertidumbre", "caos", "ambiente hostil"],
+        "mode": "ocupacion imponente",
+        "dominance": 9
+    }
+};
+
+const totemsGrid = document.getElementById('totems-grid');
+Object.entries(totems)
+    .sort(([, a], [, b]) => b.dominance - a.dominance)
+    .forEach(([name, data]) => {
+        const card = document.createElement('article');
+        card.className = 'totem';
+        card.innerHTML = `
+            <h3>${name}</h3>
+            <p class="mode">Modo: ${data.mode}</p>
+            <div class="dominance">Dominancia: ${data.dominance}/10</div>
+            <ul>
+                ${data.triggers.map(trigger => `<li>${trigger}</li>`).join('')}
+            </ul>
+        `;
+        totemsGrid.appendChild(card);
+    });
 </script>
 
 </body>
